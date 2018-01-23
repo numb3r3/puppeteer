@@ -2065,6 +2065,21 @@ If `key` is a single character and no modifier keys besides `Shift` are being he
 This method scrolls element into view if needed, and then uses [page.screenshot](#pagescreenshotoptions) to take a screenshot of the element.
 If the element is detached from DOM, the method throws an error.
 
+#### elementHandle.startScreencast([options])
+- `options` <[Object]> Same options as in [page.startScreencast](#startscreencastoptions).
+- returns: <[Promise]> Promise which resolves to buffer with captured screenshot.
+
+This method scrolls element into view if needed, and then uses [page.startScreencast](#startscreencastoptions) to take a screenshot of the element.
+If the element is detached from DOM, the method throws an error.
+
+#### elementHandle.stopScreencast()
+- returns: <[Promise]> Promise which resolves to buffer with captured screenshot.
+
+#### elementHandle.screencastFrameAck(sessionId)
+- `options` <[number]> session id.
+- returns: <[Promise]> Promise which resolves to buffer with captured screenshot.
+
+
 #### elementHandle.tap()
 - returns: <[Promise]> Promise which resolves when the element is successfully tapped. Promise gets rejected if the element is detached from DOM.
 
